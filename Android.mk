@@ -57,7 +57,7 @@ ifneq ($(TW_DEVICE_VERSION),)
     LOCAL_CFLAGS += -DTW_DEVICE_VERSION='"$(TW_DEVICE_VERSION)"'
     export FOX_DEVICE_VERSION=$(TW_DEVICE_VERSION)
 else
-    LOCAL_CFLAGS += -DTW_DEVICE_VERSION='"Unofficial"'
+    LOCAL_CFLAGS += -DTW_DEVICE_VERSION='"$(shell date '+%Y%m%d.%H')"'
     export FOX_DEVICE_VERSION=R10.1
 endif
 
