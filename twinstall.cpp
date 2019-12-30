@@ -769,6 +769,10 @@ static int Run_Update_Binary(const char *path, ZipWrap * Zip, int *wipe_cache,
 	{
 	  printf("%s\n", strtok(NULL, "\n"));
 	}
+      else if (strcmp(command, "inc_progress") == 0)
+	{
+	  // Do nothing, used by Meizu
+	}
       else
 	{
 	  LOGERR("unknown command [%s]\n", command);
